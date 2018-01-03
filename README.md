@@ -1,1 +1,1 @@
-# neural_network_multi_classification
+# neural_network_multiclass_classification
