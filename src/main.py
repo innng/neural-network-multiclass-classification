@@ -36,6 +36,7 @@ train_split = 0.93
 metric = "categorical_accuracy"
 logname = "../logs/training.log"
 
+# database specific information
 size = 1429
 train_start = 0
 train_end = int(size * train_split)
@@ -45,6 +46,7 @@ test_end = size
 
 # load data
 def Load(start, end):
+    # load input
     data = np.loadtxt(filename, delimiter=";", dtype=np.str)
     # split input
     X = data[start:end, 0:var].astype(float)
@@ -93,7 +95,9 @@ def Evaluate(X, Y):
 
 
 def main():
+    # define the train part of the database
     (train_X, train_Y) = Load(train_start, train_end)
+    # define the test part of the database
     (test_X, test_Y) = Load(test_start, test_end)
     Build()
     Compile()

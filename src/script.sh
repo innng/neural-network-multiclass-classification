@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 main.py 15 0 0.005 
+python3 main.py (<HIDDEN_LAYER_NEURONS> <HIDDEN_LAYER_EXTRAS> <LEARNING_RATE>)
